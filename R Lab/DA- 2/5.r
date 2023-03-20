@@ -1,0 +1,13 @@
+#5
+item1=c(22,42,44,52,45,37)
+item2=c(52,33,8,47,43,32)
+item3=c(16,24,19,18,34,39)
+group=data.frame(cbind(item1,item2,item3))
+group
+summary(group)
+stgr=stack(group)
+stgr
+crd=aov(values~ind,data=stgr)
+crd
+summary(crd)
+boxplot(group)
